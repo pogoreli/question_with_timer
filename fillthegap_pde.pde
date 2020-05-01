@@ -11,6 +11,7 @@ void setup()
   size(800,800);
   background=loadImage("bvf.jpg");
   frameRate(70);
+  array();
   for(int i=0; i<fg.length;i++)
   {
   fg[i]=new fill_the_gap_question(i);

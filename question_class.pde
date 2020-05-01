@@ -51,10 +51,14 @@ void drawFillTheBlank()//void draw for fill the blank
 
 void setFillTheBlank()//void setup for fill the blank
 {
-  t[fg_question][0]=new textbox(width*0.5, height*0.3,0.6*width, 1,"IVAN",12);
-  t[fg_question][1]=new textbox(width*0.5, height*0.5,0.3*width, 2,"ALEX",6);
-  t[fg_question][2]=new textbox(width*0.2, height*0.6,0.3*width, 3,"KHALID",6);
-  t[fg_question][3]=new textbox(width*0.6, height*0.7,0.3*width, 4,"AI",6);
+  for(int i=0;i<location_and_size[questionNumber].length;i++)
+  {
+    t[fg_question][i]=new textbox(location_and_size[questionNumber][i][0], location_and_size[questionNumber][i][1],location_and_size[questionNumber][i][2], int(location_and_size[questionNumber][i][3]),answers[questionNumber][i],int(location_and_size[questionNumber][i][4]));
+  }
+  //t[fg_question][0]=new textbox(width*0.5, height*0.3,0.6*width, 1,"IVAN",12);
+  //t[fg_question][1]=new textbox(width*0.5, height*0.5,0.3*width, 2,"ALEX",6);
+  //t[fg_question][2]=new textbox(width*0.2, height*0.6,0.3*width, 3,"KHALID",6);
+  //t[fg_question][3]=new textbox(width*0.6, height*0.7,0.3*width, 4,"AI",6);
   
   for(int i=0; i<t[questionNumber].length; i++)
   {
