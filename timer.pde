@@ -22,7 +22,7 @@ class timer
   
   void timerCount()
   {
-   if(framesLeft>0 && !fg.done)
+   if(framesLeft>0 && !fg[fg_question].done)
    {
    framesLeft--; 
    }else
@@ -64,7 +64,7 @@ class timer
   
   void timesUp()
   {
-    if(!fg.done)
+    if(!fg[fg_question].done)
     {
     textSize(20);
     fill(255,0,0);

@@ -1,4 +1,7 @@
-fill_the_gap_question fg;
+//replace fg[fg_question] by number of question//done
+
+int fg_question=0;
+fill_the_gap_question[] fg=new fill_the_gap_question[2];
 String username= "IVAN";//username
 PImage background;//background image
 int score=0;//variable, which stores the score
@@ -8,13 +11,15 @@ void setup()
   size(800,800);
   background=loadImage("bvf.jpg");
   frameRate(70);
-  fg=new fill_the_gap_question(0);
-
+  for(int i=0; i<fg.length;i++)
+  {
+  fg[i]=new fill_the_gap_question(i);
+  }
 }
 
 void draw()
 {
-  fg.drawFillTheBlank();
+  fg[fg_question].drawFillTheBlank();
 }
 
 void score()//displaying the score

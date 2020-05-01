@@ -39,7 +39,7 @@ class textbox
     
     if(condition=='U')//If the question is not yet answered
     {
-      if(number==fg.boxnumber)//if the field is chosen by user
+      if(number==fg[fg_question].boxnumber)//if the field is chosen by user
       {
         stroke(#34b7eb);//stroke is blue
         strokeWeight(10);
@@ -49,7 +49,7 @@ class textbox
       }
     }else if(condition=='C')//if the answer is correct
     {
-      if(number==fg.boxnumber)//if the field is chosen by user
+      if(number==fg[fg_question].boxnumber)//if the field is chosen by user
       {
         stroke(#34b7eb);//stroke is blue
         strokeWeight(10);
@@ -60,7 +60,7 @@ class textbox
       }
     }else
     {//if the answer is incorrect or empty
-      if(number==fg.boxnumber)//if the field is chosen by user
+      if(number==fg[fg_question].boxnumber)//if the field is chosen by user
       {
         stroke(#34b7eb);//stroke is blue
         strokeWeight(10);
@@ -84,7 +84,7 @@ class textbox
   
   void textInput()//keyboard input
   {
-    if(number==fg.boxnumber)//if the textfield number matches with the user's choice type in that field
+    if(number==fg[fg_question].boxnumber)//if the textfield number matches with the user's choice type in that field
     {
       if(keyPressed)//if the keyboard key is pressed
       {

@@ -41,8 +41,8 @@ void drawFillTheBlank()//void draw for fill the blank
   submitButton();//submitting the assigment
   for(int i=0; i<t[questionNumber].length; i++)
   {
-  t[0][i].textDisplay();
-  t[0][i].textInput();
+  t[fg_question][i].textDisplay();
+  t[fg_question][i].textInput();
   }
   correct();
   timer1.timerVisualisation();
@@ -51,14 +51,14 @@ void drawFillTheBlank()//void draw for fill the blank
 
 void setFillTheBlank()//void setup for fill the blank
 {
-  t[0][0]=new textbox(width*0.5, height*0.3,0.6*width, 1,"IVAN",12);
-  t[0][1]=new textbox(width*0.5, height*0.5,0.3*width, 2,"ALEX",6);
-  t[0][2]=new textbox(width*0.2, height*0.6,0.3*width, 3,"KHALID",6);
-  t[0][3]=new textbox(width*0.6, height*0.7,0.3*width, 4,"AI",6);
+  t[fg_question][0]=new textbox(width*0.5, height*0.3,0.6*width, 1,"IVAN",12);
+  t[fg_question][1]=new textbox(width*0.5, height*0.5,0.3*width, 2,"ALEX",6);
+  t[fg_question][2]=new textbox(width*0.2, height*0.6,0.3*width, 3,"KHALID",6);
+  t[fg_question][3]=new textbox(width*0.6, height*0.7,0.3*width, 4,"AI",6);
   
   for(int i=0; i<t[questionNumber].length; i++)
   {
-  t[0][i].setValues();
+  t[fg_question][i].setValues();
   }
   
   //timersetup();
@@ -111,7 +111,7 @@ void buttonAction()
   
   for(int i=0; i<t[questionNumber].length; i++)
     {
-      res[i]=t[0][i].check();//getting the results from the object
+      res[i]=t[fg_question][i].check();//getting the results from the object
       
     }
     
@@ -150,7 +150,7 @@ void switching()//checking what texbox was chosen by user
   {
     for(int i=0; i<t[questionNumber].length; i++)
     {
-      if(mouseX>=t[0][i].Xmin && mouseX<=t[0][i].Xmax && mouseY>=t[0][i].Ymin && mouseY<=t[0][i].Ymax)
+      if(mouseX>=t[fg_question][i].Xmin && mouseX<=t[fg_question][i].Xmax && mouseY>=t[fg_question][i].Ymin && mouseY<=t[fg_question][i].Ymax)
       {
        boxnumber=i+1;
       }
