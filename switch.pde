@@ -1,4 +1,4 @@
-void switching()
+void switching()//checking what texbox was chosen by user
 {
   if(mousePressed)
   {
