@@ -1,6 +1,5 @@
 class timer
 {
-
   boolean timeisup=false;
   
   float time; //22.5 approximately equal to 60 seconds
@@ -23,12 +22,12 @@ class timer
   void timerCount()
   {
    if(framesLeft>0 && !fg[fg_question].done)
-   {
-   framesLeft--; 
-   }else
-   {
-     timesUp();
-   }
+     {
+       framesLeft--; 
+     }else
+     {
+       timesUp();
+     }
   }
   
   int scoreCounter()
@@ -54,23 +53,23 @@ class timer
    int colour=int(map(framesLeft,0,framesTotal,0,255));
   
    if(timeLeft>0)
-   {
-   fill(255-colour,20,colour);
-   noStroke();
-   int corners=10;
-   rect(Xtimer,Ytimer,timeLeft,Ysize,10,corners,corners,10);
-   }
+     {
+       fill(255-colour,20,colour);
+       noStroke();
+       int corners=10;
+       rect(Xtimer,Ytimer,timeLeft,Ysize,10,corners,corners,10);
+     }
   }
   
   void timesUp()
   {
     if(!fg[fg_question].done)
-    {
-    textSize(20);
-    fill(255,0,0);
-    textMode(CENTER);
-    text("TIME IS UP!", 0.5*width, 0.0445*height);
-    timeisup=true;
-    }
+      {
+        textSize(20);
+        fill(255,0,0);
+        textMode(CENTER);
+        text("TIME IS UP!", 0.5*width, 0.0445*height);
+        timeisup=true;
+      }
   }
 }

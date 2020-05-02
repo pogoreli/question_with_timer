@@ -1,6 +1,4 @@
-//replace fg[fg_question] by number of question//done
-
-int fg_question=0;
+int fg_question=1;
 fill_the_gap_question[] fg=new fill_the_gap_question[2];
 String username= "IVAN";//username
 PImage background;//background image
@@ -13,9 +11,9 @@ void setup()
   frameRate(70);
   array();
   for(int i=0; i<fg.length;i++)
-  {
-  fg[i]=new fill_the_gap_question(i);
-  }
+    {
+    fg[i]=new fill_the_gap_question(i);//inicialize separately in the beginning of the question to start the timer
+    }
 }
 
 void draw()
